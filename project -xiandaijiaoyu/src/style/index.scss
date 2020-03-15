@@ -1,0 +1,183 @@
+@charset"utf-8";
+/*reset样式重置*/
+html,body,p,h1,h2,h3,h4,h5,h6,form,input,textarea,select,button,fieldset,legend,img,ul,ol,li,dl,dt,dd,th,td,pre,blockquote{margin:0;padding:0;font-weight: normal;}
+html{height:100%;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;-webkit-font-smoothing:antialiased}
+input{padding:0;margin:0;}
+a{color:#333333; }
+ul,li,ol{list-style:none}
+img{display:inline-block;overflow:hidden;vertical-align:middle;max-width:100%;border:0;}
+b,strong,em{font-style:normal; font-weight: normal;}
+table{border-collapse:collapse;border-spacing:0;}
+/*button,input[type="button"]{cursor:pointer;border:0 none;}*/
+textarea{word-wrap:break-word;resize:none;}  /* word-wrap for opera, resize for webkit */
+input,select,textarea{outline:none;}
+input[type="number"]{-webkit-user-select:text;}
+input[type="button"]{-webkit-appearance: none;}
+a,a:hover,a:focus{text-decoration: none;}
+a,button,input,optgroup,select,textarea {
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /*去掉a、input和button点击时的蓝色外边框和灰色半透明背景*/
+}
+a,button,input,img{-webkit-touch-callout:none;}/* 1.ios 长按时不触发系统的菜单 2.禁止长按时下载图片 */
+::-webkit-scrollbar{
+  display: none /* //隐藏滚动条 */
+}
+/*流畅滑动*/
+
+* {
+	-webkit-overflow-scrolling: touch;
+	overflow-scrolling: touch;
+}
+
+Element {
+	-webkit-appearance: none;
+	/*ios系统输入框阴影*/
+}
+
+.clearfix {
+	clear: both;
+}
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	zoom: 1;
+}
+
+.l {
+	float: left;
+}
+
+.r {
+	float: right;
+}
+
+html {
+	color: #333333;
+	font-size: 16px;
+}
+
+body {
+	-webkit-user-select: none;
+	-webkit-text-size-adjust: none;
+	background: #fff;
+}
+
+body,
+footer {
+	font-family: "\5FAE\8F6F\96C5\9ED1", "microsoft yahei";
+}
+*:not(input,textarea) {
+   -webkit-touch-callout: none;
+   -webkit-user-select: none;
+}
+@media only screen and (max-width:750px),
+only screen and (max-device-width:750px) {
+
+    html,
+    body {
+        font-size: 117.1875px;
+    }
+}
+
+@media only screen and (max-width:720px),
+only screen and (max-device-width:720px) {
+
+    html,
+    body {
+        font-size: 112.5px;
+    }
+}
+
+@media only screen and (max-width:640px),
+only screen and (max-device-width:640px) {
+
+    html,
+    body {
+        font-size: 100px;
+    }
+}
+
+@media only screen and (max-width:600px),
+only screen and (max-device-width:600px) {
+
+    html,
+    body {
+        font-size: 93.75px;
+    }
+}
+
+@media only screen and (max-width:540px),
+only screen and (max-device-width:540px) {
+
+    html,
+    body {
+        font-size: 84.375px;
+    }
+}
+
+@media only screen and (max-width:480px),
+only screen and (max-device-width:480px) {
+
+    html,
+    body {
+        font-size: 75px;
+    }
+}
+
+@media only screen and (max-width:414px),
+only screen and (max-device-width:414px) {
+
+    html,
+    body {
+        font-size: 64.6875px;
+    }
+}
+
+@media only screen and (max-width:400px),
+only screen and (max-device-width:400px) {
+
+    html,
+    body {
+        font-size: 62.5px;
+    }
+}
+
+@media only screen and (max-width:375px),
+only screen and (max-device-width:375px) {
+
+    html,
+    body {
+        font-size: 58.59375px;
+    }
+}
+
+@media only screen and (max-width:360px),
+only screen and (max-device-width:360px) {
+
+    html,
+    body {
+        font-size: 56.25px;
+    }
+}
+
+@media only screen and (max-width:320px),
+only screen and (max-device-width:320px) {
+
+    html,
+    body {
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width:240px),
+only screen and (max-device-width:240px) {
+
+    html,
+    body {
+        font-size: 37.5px;
+    }
+}
