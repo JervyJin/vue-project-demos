@@ -4,11 +4,19 @@
     <div class="line" id="line" :style="{width: '700px', height: '300px'}"></div>
     <div class="line" id="line_M" :style="{width: '700px', height: '300px'}"></div>
     <div class="bing" id="bing" :style="{width: '700px', height: '300px',marginTop:'100px'}"></div>
+    <div id="myMap" ref="myMap" style="width: 600px; height: 300px;"></div>
   </div>
 </template>
 <script>
+import "echarts/map/js/china.js"; // 引入中国地图数据（必须引入）
+import option from "../util/map-option";
 export default {
   name: "app",
+  data() {
+    return {
+      chart: null
+    };
+  },
   methods: {
     drawChart() {
       // 基于准备好的dom，初始化echarts实例
@@ -189,16 +197,35 @@ export default {
           }
         ]
       });
+    },
+    // 绘制中国地图
+    drawChinaMap() {
+      this.chart = this.$echarts.init(
+        document.getElementById("myMap"),
+        "macarons"
+      );
+      this.chart.setOption(option);
     }
   },
   mounted() {
-     
     this.drawChart();
     this.drawLine1();
     this.drawLine2();
     this.drawBing();
-   
+    this.drawChinaMap();
   },
+  updated() {
+    if (!this.chart) {
+      this.initChart();
+    }
+  },
+  beforeDestroy() {
+    if (!this.chart) {
+      return;
+    }
+    this.chart.dispose();
+    this.chart = null;
+  }
   // 可以尝试下，调整大小的时候，重新销毁图后再绘制
   // echart的dispose()和clear()方法，你可以了解一下
   // dispose(){
@@ -209,5 +236,4 @@ export default {
   //   };
   // }
 };
-
 </script>

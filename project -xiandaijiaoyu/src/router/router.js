@@ -2,7 +2,8 @@ export const routes = [
   {
     path: '/',
     name: 'home',
-    component: () => import(/* webpackChunkName: "home" */'@/views/home/index'),
+    // component: () => import(/* webpackChunkName: "home" */'@/views/home/index'),
+    component: () => import(/* webpackChunkName: "home" */'@/views/echarts'),
     meta: {
       title: '7天亲子教育线上训练营'
     }
@@ -83,4 +84,21 @@ export const routes = [
       title: '邀迭代拼团audio'
     }
   },
+  {
+    path: '/map',
+    name: 'map',
+    component: () => import(/* webpackChunkName: "listen" */ '@/views/map.vue'),
+    meta: {
+      title: '邀迭代拼团audio'
+    }
+  },
+  {
+    path: '/map_two',
+    name: 'map_two',
+    component: () => import(/* webpackChunkName: "listen" */ '@/views/map_two.vue'),
+    meta: {
+      title: '邀迭代拼团audio'
+    }
+  },
+  
 ]

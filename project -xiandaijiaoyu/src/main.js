@@ -9,6 +9,7 @@ import 'vant/lib/index.css';
 import 'vant/lib/icon/local.css';
 import echarts from "echarts";
 Vue.prototype.$echarts = echarts;
+import BaiduMap from 'vue-baidu-map'
 
 // 将http.js放入全局
 Vue.prototype.http = http
@@ -22,6 +23,10 @@ import {
 import '@/style/index.scss'
 import '@/style/common.scss'
 
+// 使用百度地图api
+Vue.use(BaiduMap, {
+  ak: 'SnNEoLld1yGa06hqLBYKrsMmeOhDxGv7'  //自己的ak
+});
 // Vue.use(Vant);
 Vue.use(Tab).use(Tabs)
 Vue.use(Tabbar).use(TabbarItem)
